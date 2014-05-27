@@ -6,8 +6,46 @@
 user=$(whoami)
 hostname=$(hostname | sed 's/.local//g')
 
-## Distro
-distro="OS X $(sw_vers -productVersion)"
+## Version of OS X
+version="OS X $(sw_vers -productVersion)"
+
+## Version name
+versionNumber=$(sw_vers -productVersion) # Finds version number
+
+versionShort=${versionNumber:0:4}  # Cut sting to 1 decimal place for calculation
+
+case $versionShort in
+    10.9)
+        versionString="Mavericks"
+        ;;
+    10.8)
+        versionString="Mountian Lion"
+        ;;
+    10.7)
+        versionString="Lion"
+        ;;
+    10.6)
+        versionString="Snow Leopard"
+        ;;
+    10.5)
+        versionString="Leopard"
+        ;;
+    10.4)
+        versionString="Tiger"
+        ;;
+    10.3)
+        versionString="Panther"
+        ;;
+    10.2)
+        versionString="Jaguar"
+        ;;
+    10.1)
+        versionString="Puma"
+        ;;
+    10.0)
+        versionString="Cheetah"
+        ;;
+esac
 
 ## Kernal
 kernel=$(uname)
