@@ -9,8 +9,8 @@ Installation
 ------------
     $ git clone git://github.com/joshfinnie/archey-osx.git
     $ cd archey-osx/
-    $ sudo cp archey /bin/archey
-    $ sudo chmod +x /bin/archey 
+    $ sudo chmod +x bin/archey
+    $ ln -s $PWD/bin/archey /usr/local/bin/archey
     $ archey
  
 Thanks
