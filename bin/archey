@@ -16,6 +16,8 @@ versionMajor=`echo $versionNumber | cut -d'.' -f1`
 versionMinor=`echo $versionNumber | cut -d'.' -f2`
 versionShort="${versionMajor}.${versionMinor}"
 
+ipAddress=`ipconfig getifaddr en1`
+
 case $versionShort in
     10.10)
         versionString="Yosemite"
@@ -104,6 +106,6 @@ ${RED}    #####################             Packages $packages
 ${PURPLE}     ######################           CPU: $cpu
 ${PURPLE}      ####################            Memory: $ram
 ${BLUE}        ################              Disk Used: $disk
-${BLUE}         ####     ##### ${normal}
+${BLUE}         ####     #####               Internal IP: $ipAddress
 
 "
