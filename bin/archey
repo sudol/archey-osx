@@ -16,7 +16,12 @@ versionMajor=`echo $versionNumber | cut -d'.' -f1`
 versionMinor=`echo $versionNumber | cut -d'.' -f2`
 versionShort="${versionMajor}.${versionMinor}"
 
+
+## en1 or en0 should contain the ip address
 ipAddress=`ipconfig getifaddr en1`
+if [ -z "$ipAddress" ]; then
+    ipAddress=`ipconfig getifaddr en0`
+fi
 
 case $versionShort in
     10.10)
