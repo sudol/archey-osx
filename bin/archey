@@ -114,3 +114,4 @@ ${BLUE}        ################              Disk Used: $disk
 ${BLUE}         ####     #####               Internal IP: $ipAddress
 
 "
+tput sgr0
