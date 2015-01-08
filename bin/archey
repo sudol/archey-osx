@@ -31,7 +31,7 @@ case $versionShort in
         versionString="Mavericks"
         ;;
     10.8)
-        versionString="Mountian Lion"
+        versionString="Mountain Lion"
         ;;
     10.7)
         versionString="Lion"
